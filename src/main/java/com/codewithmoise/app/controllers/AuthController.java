@@ -2,11 +2,13 @@ package com.codewithmoise.app.controllers;
 
 import com.codewithmoise.app.dto.LoginRequest;
 import com.codewithmoise.app.dto.RegisterRequest;
+import com.codewithmoise.app.exception.BadRequestException;
 import com.codewithmoise.app.models.Role;
 import com.codewithmoise.app.models.User;
 import com.codewithmoise.app.repository.UserRepository;
 import com.codewithmoise.app.util.EmailService;
 import com.codewithmoise.app.util.JwtUtil;
+import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AuthenticationManager;
